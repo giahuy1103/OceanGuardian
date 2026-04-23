@@ -12,7 +12,7 @@ This project emphasizes data integrity, specifically addressing multimodal chall
 
 ## System Architecture
 
-The architecture employs an **Early Fusion** strategy to balance the influence of distinct data modalities:
+The core architecture of OceanGuardian is adapted from a rigorously tested multi feature fusion framework originally developed for cybersecurity threat detection. By applying these robust mathematical and statistical methodologies to environmental data, the system employs an **Early Fusion** strategy to balance the influence of distinct data modalities:
 
 * **Visual Branch:** Utilizes a pre-trained ResNet18 backbone. The final fully connected layer is constrained to 128 dimensions to prevent the visual modality from overpowering the tabular data.
 * **Environmental Branch:** A Multi-Layer Perceptron (MLP) processes 6-dimensional tabular data (SST, pH, Latitude, Longitude, Month, Marine Heatwave) into a 64-dimensional feature vector, utilizing BatchNorm1d to stabilize distributions.
@@ -139,4 +139,10 @@ OceanGuardian/
 **Huy Nguyen**
 Master of Science in Computer Science | Asian Institute of Technology (AIT)
 
+---
+## Data Sources & Acknowledgments
+
+This framework was trained and evaluated using publicly available datasets. We extend our gratitude to the creators and maintainers of these repositories:
+* **Visual Data:** [Healthy and Bleached Corals Image Classification](https://www.kaggle.com/datasets/vencerlanz09/healthy-and-bleached-corals-image-classification)
+* **Tabular Data:** [Shifting Seas: Ocean Climate and Marine Life Dataset](https://www.kaggle.com/datasets/atharvasoundankar/shifting-seas-ocean-climate-and-marine-life-dataset)
 
